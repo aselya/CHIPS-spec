@@ -4,9 +4,9 @@
 
 HTTP                                                           D. Cutler
 Internet-Draft                                                Google LLC
-Updates: 6265 (if approved)                               6 October 2022
+Updates: 6265 (if approved)                               7 October 2022
 Intended status: Informational                                          
-Expires: 9 April 2023
+Expires: 10 April 2023
 
 
        Cookies Having Independent Partitioned State specification
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 April 2023.
+   This Internet-Draft will expire on 10 April 2023.
 
 Copyright Notice
 
@@ -92,7 +92,9 @@ Table of Contents
      4.2.  Third-Party Cookie Controls
      4.3.  Partitioned Cookies and Clear-Site-Data
    5.  IANA Considerations
-   Appendix A.  References
+   6.  References
+     6.1.  Normative References
+     6.2.  Informative References
    Acknowledgments
    Author's Address
 
@@ -101,8 +103,7 @@ Table of Contents
    In order to increase privacy on the web, browser vendors are either
    planning or already shipping restrictions on cross-site tracking.
    This includes phasing out support for third-party cookies, as defined
-   in section 7.1 of RFC6265bis (https://datatracker.ietf.org/doc/html/
-   draft-ietf-httpbis-rfc6265bis-10#section-7.1).
+   in Section 7.1 of [RFC6265bis].
 
    Although third-party cookies can enable third-party sites to track
    user behavior across different top-level sites, there are some cookie
@@ -123,8 +124,8 @@ Table of Contents
 2.1.  The Partitioned attribute
 
    Below is the definition of the Partitioned attribute.  This could be
-   added as a new subsection of 4.1.2 (Semantics (Non-Normative)) in
-   RFC6265bis:
+   added as a new subsection of Section 4.1.2 (Semantics
+   (Non-Normative)) of [RFC6265bis]:
 
    |  The Partitioned attribute limits the scope of the cookie such that
    |  it will only be sent when the site of the top-document (defined in
@@ -135,8 +136,8 @@ Table of Contents
 2.2.  Computing the cookie partition key
 
    Below is the algorithm that browsers can use to compute a request's
-   cookie partition key.  This algorithm could be added after section
-   5.2 ("Same-site" and "cross-site" Requests) in RFC6265bis:
+   cookie partition key.  This algorithm could be added after
+   Section 5.2 ("Same-site" and "cross-site" Requests) of [RFC6265bis]:
 
    |  1.  Let top-document be the active document in document's browsing
    |      context's top-level browsing context.
@@ -153,8 +154,8 @@ Table of Contents
 
    Below is the algorithm that browsers can use to parse cookie lines
    with this attribute.  This algorithm could be added as a new
-   subsection of section 5.4 (The Set-Cookie Header Field) of
-   RFC6265bis:
+   subsection of Section 5.4 (The Set-Cookie Header Field) of
+   [RFC6265bis]:
 
    |  If an attribute-name case-insensitively matches the string
    |  "Partitioned" then the user-agent MUST append an attribute to the
@@ -291,7 +292,7 @@ Table of Contents
    We also can propose changes to the Clear-Site-Data header
    specification to prevent abuse of that header and partitioned cookies
    for cross-site tracking.  The following could be added after step 2
-   in section 4.2.1 of the Clear-Site-Data spec:
+   in section 4.2.1 of [Clear-Site-Data]:
 
    |  1.  For each cookie in cookie-list, do the following:
    |  
@@ -306,18 +307,28 @@ Table of Contents
 
    This document has no IANA actions.
 
-Appendix A.  References
+6.  References
 
-   *  Cookies Having Independent Partitioned State (CHIPS) explainer
-      (https://github.com/privacycg/CHIPS)
+6.1.  Normative References
 
-   *  Cookies: HTTP State Management Mechanism
-      (https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-
-      rfc6265bis-10)
+   [Clear-Site-Data]
+              "Clear Site Data",
+              <https://www.w3.org/TR/clear-site-data/>.
 
-   *  Clear Site Data (https://www.w3.org/TR/clear-site-data/)
+   [HTML]     WHATWG, "HTML", <https://html.spec.whatwg.org/>.
 
-   *  HTML (https://html.spec.whatwg.org/)
+   [RFC6265bis]
+              Chen, L., Englehardt, S., West, M., and J. Wilander,
+              "Cookies: HTTP State Management Mechanism", Work in
+              Progress, Internet-Draft, draft-ietf-httpbis-rfc6265bis-
+              10, 24 April 2022, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-httpbis-rfc6265bis-10>.
+
+6.2.  Informative References
+
+   [CHIPS-Explainer]
+              "Cookies Having Independent Partitioned State (CHIPS)
+              explainer", <https://github.com/privacycg/CHIPS>.
 
 Acknowledgments
 
