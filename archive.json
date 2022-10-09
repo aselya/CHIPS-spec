@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-04T00:13:29.294945+00:00",
+  "timestamp": "2022-10-09T00:11:38.460450+00:00",
   "repo": "DCtheTall/CHIPS-spec",
   "labels": [
     {
@@ -56,24 +56,26 @@
       "id": "PR_kwDOH_4ODs4_DCwK",
       "title": "Add CHIPS spec draft to repo",
       "url": "https://github.com/DCtheTall/CHIPS-spec/pull/1",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "DCtheTall",
       "authorAssociation": "OWNER",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2022-09-15T18:48:31Z",
-      "updatedAt": "2022-09-26T18:05:21Z",
+      "updatedAt": "2022-10-05T20:29:48Z",
       "baseRepository": "DCtheTall/CHIPS-spec",
       "baseRefName": "main",
       "baseRefOid": "3004107b7866288ba4de13ab64fa7f77c99cd325",
       "headRepository": "DCtheTall/CHIPS-spec",
       "headRefName": "draft",
-      "headRefOid": "ce132f0ba69baa500d576c823045e601bc59d9a7",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "3ed38d59e052219bb8b349b654f26ffd412340c6",
+      "closedAt": "2022-10-05T20:29:47Z",
+      "mergedAt": "2022-10-05T20:29:47Z",
+      "mergedBy": "DCtheTall",
+      "mergeCommit": {
+        "oid": "a25b7bffbeb6e58443e848a6db928afae2fafcd1"
+      },
       "comments": [],
       "reviews": [
         {
@@ -115,8 +117,148 @@
               "updatedAt": "2022-09-26T18:05:21Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDOH_4ODs5DeRqA",
+          "commit": {
+            "abbreviatedOid": "ce132f0"
+          },
+          "author": "DCtheTall",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-10-05T20:29:21Z",
+          "updatedAt": "2022-10-05T20:29:21Z",
+          "comments": [
+            {
+              "originalPosition": 5,
+              "body": "Done.",
+              "createdAt": "2022-10-05T20:29:21Z",
+              "updatedAt": "2022-10-05T20:29:21Z"
+            }
+          ]
         }
       ]
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOH_4ODs5AP875",
+      "title": "This might fix the broken GH action",
+      "url": "https://github.com/DCtheTall/CHIPS-spec/pull/2",
+      "state": "MERGED",
+      "author": "jyasskin",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "See https://github.com/DCtheTall/CHIPS-spec/actions/runs/3192505413/jobs/5210058263",
+      "createdAt": "2022-10-05T22:29:14Z",
+      "updatedAt": "2022-10-06T17:52:40Z",
+      "baseRepository": "DCtheTall/CHIPS-spec",
+      "baseRefName": "main",
+      "baseRefOid": "a25b7bffbeb6e58443e848a6db928afae2fafcd1",
+      "headRepository": "jyasskin/CHIPS-spec",
+      "headRefName": "spec-filename",
+      "headRefOid": "94461817617bce770ef4f82be442434aeea8f626",
+      "closedAt": "2022-10-06T17:15:09Z",
+      "mergedAt": "2022-10-06T17:15:09Z",
+      "mergedBy": "DCtheTall",
+      "mergeCommit": {
+        "oid": "087180bb77cc219fe26b0a129248d51fba6dd6a0"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOH_4ODs5AVqM4",
+      "title": "Fix the I-D build.",
+      "url": "https://github.com/DCtheTall/CHIPS-spec/pull/3",
+      "state": "MERGED",
+      "author": "jyasskin",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-10-06T18:07:51Z",
+      "updatedAt": "2022-10-06T23:44:51Z",
+      "baseRepository": "DCtheTall/CHIPS-spec",
+      "baseRefName": "main",
+      "baseRefOid": "50a5dbafdf8fc65aee282c9ca53af9f141841508",
+      "headRepository": "jyasskin/CHIPS-spec",
+      "headRefName": "fix-build",
+      "headRefOid": "310acd66c992509b40a7f1ea8737dbac84627e5d",
+      "closedAt": "2022-10-06T18:10:37Z",
+      "mergedAt": "2022-10-06T18:10:37Z",
+      "mergedBy": "DCtheTall",
+      "mergeCommit": {
+        "oid": "7fe703347cc6ea23d3330cbdf9a457ed7212a518"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOH_4ODs5AVtZa",
+      "title": "Fix up some metadata.",
+      "url": "https://github.com/DCtheTall/CHIPS-spec/pull/4",
+      "state": "MERGED",
+      "author": "jyasskin",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-10-06T18:20:58Z",
+      "updatedAt": "2022-10-06T23:45:14Z",
+      "baseRepository": "DCtheTall/CHIPS-spec",
+      "baseRefName": "main",
+      "baseRefOid": "7fe703347cc6ea23d3330cbdf9a457ed7212a518",
+      "headRepository": "jyasskin/CHIPS-spec",
+      "headRefName": "fix-metadata",
+      "headRefOid": "d5e1266c4e91e32e5299618ff5964b373cb40d2e",
+      "closedAt": "2022-10-06T18:27:10Z",
+      "mergedAt": "2022-10-06T18:27:10Z",
+      "mergedBy": "DCtheTall",
+      "mergeCommit": {
+        "oid": "1c7434e1cde1824c1d96f1e27252c53cb3bedc17"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 5,
+      "id": "PR_kwDOH_4ODs5AV5OM",
+      "title": "Use the normal references sections and links.",
+      "url": "https://github.com/DCtheTall/CHIPS-spec/pull/5",
+      "state": "MERGED",
+      "author": "jyasskin",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "See the rendering at https://jyasskin.github.io/CHIPS-spec/fix-references/draft-cutler-httpbis-cookies-having-independent-partitioned-state.html#name-introduction.",
+      "createdAt": "2022-10-06T19:06:07Z",
+      "updatedAt": "2022-10-07T02:17:05Z",
+      "baseRepository": "DCtheTall/CHIPS-spec",
+      "baseRefName": "main",
+      "baseRefOid": "0fdf8f1bc28887c1a68d46a8c3df585bd56ab461",
+      "headRepository": "jyasskin/CHIPS-spec",
+      "headRefName": "fix-references",
+      "headRefOid": "2dfa0a9b7ccaf8a81daadef6f95b64d18f14fcd0",
+      "closedAt": "2022-10-07T02:07:09Z",
+      "mergedAt": "2022-10-07T02:07:09Z",
+      "mergedBy": "DCtheTall",
+      "mergeCommit": {
+        "oid": "f05473ee9b1e99d7a6490b54394227da705bf3d4"
+      },
+      "comments": [
+        {
+          "author": "DCtheTall",
+          "authorAssociation": "OWNER",
+          "body": "Thanks for the help, Jeffrey!",
+          "createdAt": "2022-10-07T02:07:05Z",
+          "updatedAt": "2022-10-07T02:07:05Z"
+        }
+      ],
+      "reviews": []
     }
   ]
 }
