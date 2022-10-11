@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-09T00:11:38.460450+00:00",
+  "timestamp": "2022-10-11T00:13:11.295341+00:00",
   "repo": "DCtheTall/CHIPS-spec",
   "labels": [
     {
@@ -259,6 +259,59 @@
         }
       ],
       "reviews": []
+    },
+    {
+      "number": 6,
+      "id": "PR_kwDOH_4ODs5Ag8wz",
+      "title": "Use memory for per-partition-per-domain limit",
+      "url": "https://github.com/DCtheTall/CHIPS-spec/pull/6",
+      "state": "OPEN",
+      "author": "DCtheTall",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2022-10-10T18:31:58Z",
+      "updatedAt": "2022-10-10T19:35:37Z",
+      "baseRepository": "DCtheTall/CHIPS-spec",
+      "baseRefName": "main",
+      "baseRefOid": "f05473ee9b1e99d7a6490b54394227da705bf3d4",
+      "headRepository": "DCtheTall/CHIPS-spec",
+      "headRefName": "mem-limit",
+      "headRefOid": "61c539d51346f1773bcc58836a4f8239eab6698a",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOH_4ODs5DvPCI",
+          "commit": {
+            "abbreviatedOid": "61c539d"
+          },
+          "author": "jyasskin",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2022-10-10T19:35:02Z",
+          "updatedAt": "2022-10-10T19:35:37Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "In an example, which is inherently non-normative, I'd use \"might\" instead of \"MAY\". The MAY in the line before this, about limiting by bytes instead of number, might still need to be normative, depending on what the rest of the spec says about how UAs can limit the amount of cookies: if the rest of the spec says they can only limit by the number of cookies, this needs the normative MAY to let them do it differently in this case.",
+              "createdAt": "2022-10-10T19:35:03Z",
+              "updatedAt": "2022-10-10T19:35:37Z"
+            },
+            {
+              "originalPosition": 3,
+              "body": "Be consistent about SHOULD vs should. I think RFCs generally prefer all-caps even though web specs prefer lower case.",
+              "createdAt": "2022-10-10T19:35:33Z",
+              "updatedAt": "2022-10-10T19:35:37Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
