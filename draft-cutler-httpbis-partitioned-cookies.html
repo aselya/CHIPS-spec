@@ -1389,8 +1389,9 @@ Even if we block partitioned cookies (or even all cookies) from extensions' back
 <p id="section-4.1-1">The following could be added as a new subsection of section 6.1 (Limits):<a href="#section-4.1-1" class="pilcrow">¶</a></p>
 <blockquote id="section-4.1-2">
           <p id="section-4.1-2.1">User agents SHOULD enforce a separate per-domain limit for partitioned cookies for a particular cookie-partition-key.
-This limit should be lower than the per-domain limit for cookies without the Partitioned attribute to prevent cookies set on different top-level sites from reaching implementation memory limits.
-For example, a user agent MAY limit domains to 10 partitioned cookies per partition.<a href="#section-4.1-2.1" class="pilcrow">¶</a></p>
+This limit SHOULD be lower than the per-domain limit for cookies without the Partitioned attribute to prevent cookies set on different top-level sites from reaching implementation memory limits.
+Since memory is the main concern, in addition to limiting the number of cookies a domain may use per partition, a user agent MAY limit how many bytes a domain's cookies occupy on the user agent's device to only 10 kilobytes per top-level partition.
+The user agent SHOULD consider memory occupied by each cookie to be the sum of the number of octets in the cookie-name and cookie-value.<a href="#section-4.1-2.1" class="pilcrow">¶</a></p>
 </blockquote>
 </section>
 </div>
