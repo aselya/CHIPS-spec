@@ -4,13 +4,13 @@
 
 HTTP                                                           D. Cutler
 Internet-Draft                                                Google LLC
-Updates: 6265 (if approved)                               7 October 2022
+Updates: 6265 (if approved)                              13 October 2022
 Intended status: Informational                                          
-Expires: 10 April 2023
+Expires: 16 April 2023
 
 
        Cookies Having Independent Partitioned State specification
-draft-cutler-httpbis-cookies-having-independent-partitioned-state-latest
+            draft-cutler-httpbis-partitioned-cookies-latest
 
 Abstract
 
@@ -28,10 +28,10 @@ About This Document
    This note is to be removed before publishing as an RFC.
 
    The latest revision of this draft can be found at
-   https://DCtheTall.github.io/CHIPS-spec/draft-cutler-httpbis-cookies-
-   having-independent-partitioned-state.html.  Status information for
-   this document may be found at https://datatracker.ietf.org/doc/draft-
-   cutler-httpbis-cookies-having-independent-partitioned-state/.
+   https://DCtheTall.github.io/CHIPS-spec/draft-cutler-httpbis-
+   partitioned-cookies.html.  Status information for this document may
+   be found at https://datatracker.ietf.org/doc/draft-cutler-httpbis-
+   partitioned-cookies/.
 
    Discussion of this document takes place on the HTTP Working Group
    mailing list (mailto:ietf-http-wg@w3.org), which is archived at
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 10 April 2023.
+   This Internet-Draft will expire on 16 April 2023.
 
 Copyright Notice
 
