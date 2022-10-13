@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-11T00:13:11.295341+00:00",
+  "timestamp": "2022-10-13T00:12:41.911666+00:00",
   "repo": "DCtheTall/CHIPS-spec",
   "labels": [
     {
@@ -272,7 +272,7 @@
       "labels": [],
       "body": "",
       "createdAt": "2022-10-10T18:31:58Z",
-      "updatedAt": "2022-10-10T19:35:37Z",
+      "updatedAt": "2022-10-12T14:26:13Z",
       "baseRepository": "DCtheTall/CHIPS-spec",
       "baseRefName": "main",
       "baseRefOid": "f05473ee9b1e99d7a6490b54394227da705bf3d4",
@@ -308,6 +308,32 @@
               "body": "Be consistent about SHOULD vs should. I think RFCs generally prefer all-caps even though web specs prefer lower case.",
               "createdAt": "2022-10-10T19:35:33Z",
               "updatedAt": "2022-10-10T19:35:37Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOH_4ODs5D5scu",
+          "commit": {
+            "abbreviatedOid": "61c539d"
+          },
+          "author": "johannhof",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "Two minor thoughts/questions :)",
+          "createdAt": "2022-10-12T14:24:31Z",
+          "updatedAt": "2022-10-12T14:26:13Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "`to only occupy 10 kilobytes per top-level partition` or something like that to be overly precise? :)",
+              "createdAt": "2022-10-12T14:24:31Z",
+              "updatedAt": "2022-10-12T14:26:13Z"
+            },
+            {
+              "originalPosition": 5,
+              "body": "Hmm why \"instead\", isn't it \"in addition\"?",
+              "createdAt": "2022-10-12T14:25:49Z",
+              "updatedAt": "2022-10-12T14:26:13Z"
             }
           ]
         }
