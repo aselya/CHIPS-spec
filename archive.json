@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-18T00:13:29.227377+00:00",
+  "timestamp": "2022-10-20T00:14:01.536728+00:00",
   "repo": "DCtheTall/CHIPS-spec",
   "labels": [
     {
@@ -49,7 +49,24 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 8,
+      "id": "I_kwDOH_4ODs5UOmM9",
+      "title": "Should probably say \"kibibytes\" instead of \"kilobytes\"",
+      "url": "https://github.com/DCtheTall/CHIPS-spec/issues/8",
+      "state": "OPEN",
+      "author": "johannhof",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "See https://github.com/privacycg/CHIPS/pull/59#discussion_r998109514 and, if you're like me, https://www.logicmonitor.com/blog/what-the-hell-is-a-kibibyte\r\n\r\ncc @annevk @DCtheTall ",
+      "createdAt": "2022-10-18T12:13:24Z",
+      "updatedAt": "2022-10-18T12:13:24Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": [
     {
       "number": 1,
