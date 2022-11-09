@@ -1302,7 +1302,7 @@ The following could also be added as an additional step to section 5.4:<a href="
         <h3 id="name-partitioned-cookies-with-th">
 <a href="#section-2.4" class="section-number selfRef">2.4. </a><a href="#name-partitioned-cookies-with-th" class="section-name selfRef">Partitioned Cookies with the Same Name/Domain/Path</a>
         </h3>
-<p id="section-2.4-1">In order to prevent cross-partition leaks, we need to allow sites to set cookies with the same name, domain, and path as a cookie with another partition key.
+<p id="section-2.4-1">In order to prevent cross-partition leaks, we need to allow sites to set cookies with the same name, domain, and path as long as they have different partition keys.
 In order to achieve this, we suggest the following edit to step 22 of Section <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-11#section-5.5" class="relref">5.5</a> (<a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-rfc6265bis-11#section-5.5" class="relref">Storage Model</a>)</span> of <span>[<a href="#RFC6265bis" class="cite xref">RFC6265bis</a>]</span>, note that steps b-d below are not changed.<a href="#section-2.4-1" class="pilcrow">¶</a></p>
 <blockquote id="section-2.4-2">
           <ol start="1" type="1" class="normal type-1" id="section-2.4-2.1">
