@@ -4,9 +4,9 @@
 
 HTTP                                                           D. Cutler
 Internet-Draft                                                Google LLC
-Updates: 6265 (if approved)                              8 November 2022
+Updates: 6265 (if approved)                              9 November 2022
 Intended status: Informational                                          
-Expires: 12 May 2023
+Expires: 13 May 2023
 
 
        Cookies Having Independent Partitioned State specification
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 12 May 2023.
+   This Internet-Draft will expire on 13 May 2023.
 
 Copyright Notice
 
@@ -185,8 +185,8 @@ Table of Contents
    In order to prevent cross-partition leaks, we need to allow sites to
    set cookies with the same name, domain, and path as a cookie with
    another partition key.  In order to achieve this, we suggest the
-   following edit to step 22 of 5.5 (Storage Model), note that steps b-d
-   below are the same as the current spec.
+   following edit to step 22 of Section 5.5 (Storage Model) of
+   [RFC6265bis], note that steps b-d below are not changed.
 
    |  1.  If the cookie store contains a cookie with the same name,
    |      domain, host-only-flag, path, and partition-key as the newly-
