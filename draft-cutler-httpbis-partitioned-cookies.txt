@@ -4,9 +4,9 @@
 
 HTTP                                                           D. Cutler
 Internet-Draft                                                Google LLC
-Updates: 6265 (if approved)                              13 October 2022
+Updates: 6265 (if approved)                              9 November 2022
 Intended status: Informational                                          
-Expires: 16 April 2023
+Expires: 13 May 2023
 
 
        Cookies Having Independent Partitioned State specification
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 16 April 2023.
+   This Internet-Draft will expire on 13 May 2023.
 
 Copyright Notice
 
@@ -79,7 +79,8 @@ Table of Contents
      2.1.  The Partitioned attribute
      2.2.  Computing the cookie partition key
      2.3.  Using Set-Cookie with Partitioned
-     2.4.  Attaching a Partitioned Cookie to a Request
+     2.4.  Partitioned Cookies with the Same Name/Domain/Path
+     2.5.  Attaching a Partitioned Cookie to a Request
    3.  Security Considerations
      3.1.  Partitioned requires Secure
      3.2.  Partitioned cookies and XSS attacks
@@ -179,7 +180,33 @@ Table of Contents
    |      Otherwise, set partition-key to cookie-partition-key defined
    |      in section 5.X.X.
 
-2.4.  Attaching a Partitioned Cookie to a Request
+2.4.  Partitioned Cookies with the Same Name/Domain/Path
+
+   In order to prevent cross-partition leaks, we need to allow sites to
+   set cookies with the same name, domain, and path as long as they have
+   different partition keys.  In order to achieve this, we suggest the
+   following edit to step 22 of Section 5.5 (Storage Model) of
+   [RFC6265bis], note that steps b-d below are not changed.
+
+   |  1.  If the cookie store contains a cookie with the same name,
+   |      domain, host-only-flag, path, and partition-key as the newly-
+   |      created cookie:
+   |  
+   |      a.  Let old-cookie be the existing cookie with the same name,
+   |      domain, host-only-flag, path, and partition-key as the newly-
+   |      created cookie.  (Notice that this algorithm maintains the
+   |      invariant that there is at most one such cookie.)
+   |  
+   |      b.  If the newly-created cookie was received from a "non-HTTP"
+   |      API and the old-cookie's http-only-flag is true, abort these
+   |      steps and ignore the newly created cookie entirely.
+   |  
+   |      c.  Update the creation-time of the newly-created cookie to
+   |      match the creation-time of the old-cookie.
+   |  
+   |      d.  Remove the old-cookie from the cookie store.
+
+2.5.  Attaching a Partitioned Cookie to a Request
 
    The following could be added to the first step of the algorithm in
    section 5.6.3 (Retrieval Algorithm):
@@ -260,6 +287,13 @@ Table of Contents
    write cross-site identifiers to the DOM which the site's own script
    could copy to the site's partitioned cookie jar.
 
+   Finally, sites should be able to set partitioned cookies with the
+   same name, domain, and path in different partitions.  Otherwise, the
+   presence or absence of a cookie with a particular name/domain/path
+   would allow sites to learn about that user's activity on different
+   top-level sites that make subresource requests to the cookie's
+   domain.
+
 4.  Implementation Considerations
 
 4.1.  Applying Limits to Partitioned Cookie Jars
@@ -323,11 +357,11 @@ Table of Contents
    [HTML]     WHATWG, "HTML", <https://html.spec.whatwg.org/>.
 
    [RFC6265bis]
-              Chen, L., Englehardt, S., West, M., and J. Wilander,
-              "Cookies: HTTP State Management Mechanism", Work in
-              Progress, Internet-Draft, draft-ietf-httpbis-rfc6265bis-
-              10, 24 April 2022, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-httpbis-rfc6265bis-10>.
+              Bingler, S., West, M., and J. Wilander, "Cookies: HTTP
+              State Management Mechanism", Work in Progress, Internet-
+              Draft, draft-ietf-httpbis-rfc6265bis-11, 7 November 2022,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-
+              rfc6265bis-11>.
 
 6.2.  Informative References
 
