@@ -287,6 +287,13 @@ Table of Contents
    write cross-site identifiers to the DOM which the site's own script
    could copy to the site's partitioned cookie jar.
 
+   Finally, sites should be able to set partitioned cookies with the
+   same name, domain, and path in different partitions.  Otherwise, the
+   presence or absence of a cookie with a particular name/domain/path
+   would allow sites to learn about that user's activity on different
+   top-level sites that make subresource requests to the cookie's
+   domain.
+
 4.  Implementation Considerations
 
 4.1.  Applying Limits to Partitioned Cookie Jars
