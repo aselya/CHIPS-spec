@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-10-20T00:14:01.536728+00:00",
+  "timestamp": "2022-11-10T00:09:00.146821+00:00",
   "repo": "DCtheTall/CHIPS-spec",
   "labels": [
     {
@@ -465,6 +465,87 @@
       },
       "comments": [],
       "reviews": []
+    },
+    {
+      "number": 9,
+      "id": "PR_kwDOH_4ODs5CdMDW",
+      "title": "Add instructions for partitioned cookies with the same name/domain/path",
+      "url": "https://github.com/DCtheTall/CHIPS-spec/pull/9",
+      "state": "MERGED",
+      "author": "DCtheTall",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "\u2026domain/path",
+      "createdAt": "2022-11-08T19:45:28Z",
+      "updatedAt": "2022-11-09T19:01:39Z",
+      "baseRepository": "DCtheTall/CHIPS-spec",
+      "baseRefName": "main",
+      "baseRefOid": "47f212081a1aa6b37cc9949d70919a6022e27a53",
+      "headRepository": "DCtheTall/CHIPS-spec",
+      "headRefName": "same-name",
+      "headRefOid": "46485e9948f41b711fd31959a00412f692647f40",
+      "closedAt": "2022-11-09T19:01:38Z",
+      "mergedAt": "2022-11-09T19:01:38Z",
+      "mergedBy": "DCtheTall",
+      "mergeCommit": {
+        "oid": "712281f1112250271069512eeb5efa5997391180"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOH_4ODs5F6XOE",
+          "commit": {
+            "abbreviatedOid": "f02f414"
+          },
+          "author": "johannhof",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "APPROVED",
+          "body": "Thanks Dylan! A few suggestions but looks good to me overall.",
+          "createdAt": "2022-11-08T22:21:43Z",
+          "updatedAt": "2022-11-08T22:33:25Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "Could we add the (brief) full rationale for this to the `Avoiding cross-partition leaks` section in Security Considerations?",
+              "createdAt": "2022-11-08T22:21:43Z",
+              "updatedAt": "2022-11-08T22:33:25Z"
+            },
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\r\nIn order to achieve this, we suggest the following edit to step 22 of {{Section 5.5 (Storage Model) of RFC6265bis}}, note that steps b-d below are not changed.\r\n```",
+              "createdAt": "2022-11-08T22:24:52Z",
+              "updatedAt": "2022-11-08T22:33:26Z"
+            },
+            {
+              "originalPosition": 6,
+              "body": "```suggestion\r\nIn order to prevent cross-partition leaks, we need to allow sites to set cookies with the same name, domain, and path as long as they have different partition keys.\r\n```",
+              "createdAt": "2022-11-08T22:32:18Z",
+              "updatedAt": "2022-11-08T22:33:26Z"
+            }
+          ]
+        },
+        {
+          "id": "PRR_kwDOH_4ODs5GAsrF",
+          "commit": {
+            "abbreviatedOid": "f02f414"
+          },
+          "author": "DCtheTall",
+          "authorAssociation": "OWNER",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2022-11-09T18:53:50Z",
+          "updatedAt": "2022-11-09T18:53:50Z",
+          "comments": [
+            {
+              "originalPosition": 6,
+              "body": "Done.",
+              "createdAt": "2022-11-09T18:53:50Z",
+              "updatedAt": "2022-11-09T18:53:50Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
