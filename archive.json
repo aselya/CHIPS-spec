@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2022-11-10T00:09:00.146821+00:00",
+  "timestamp": "2023-01-05T00:08:10.386594+00:00",
   "repo": "DCtheTall/CHIPS-spec",
   "labels": [
     {
@@ -63,6 +63,22 @@
       "body": "See https://github.com/privacycg/CHIPS/pull/59#discussion_r998109514 and, if you're like me, https://www.logicmonitor.com/blog/what-the-hell-is-a-kibibyte\r\n\r\ncc @annevk @DCtheTall ",
       "createdAt": "2022-10-18T12:13:24Z",
       "updatedAt": "2022-10-18T12:13:24Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 10,
+      "id": "I_kwDOH_4ODs5akhVI",
+      "title": "Computing cookie partition key in service workers",
+      "url": "https://github.com/DCtheTall/CHIPS-spec/issues/10",
+      "state": "OPEN",
+      "author": "DCtheTall",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "At the time of writing this, workers always use their own origin as their site for cookies, regardless of the context they are registered in. This will change when browsers ship [storage partitioning](https://github.com/privacycg/storage-partitioning), and service workers will derive their site for cookies from their storage key instead of the worker origin. This is a nice improvement to service workers since it prevents workers registered in 3P contexts from becoming SameSite leaks.\r\n\r\nGiven this effort, I think that it makes sense to specify somehow that partitioned cookies should use the service worker's storage key, not the worker origin, to compute the cookie partition key.",
+      "createdAt": "2023-01-04T20:18:01Z",
+      "updatedAt": "2023-01-04T20:18:15Z",
       "closedAt": null,
       "comments": []
     }
